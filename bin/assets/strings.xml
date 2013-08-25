@@ -4,8 +4,14 @@
 	<TITLE_GAME_SUBTITLE><![CDATA[Son of Captain Awesomepants]]></TITLE_GAME_SUBTITLE>
 	<TITLE_PLAY_BUTTON><![CDATA[Play]]></TITLE_PLAY_BUTTON>
 
-	<STORY_1><![CDATA[Awesomepants! We need you! Our department is swamped with cases but you can solve cases in record time! Under 10 seconds I heard? Let's get started!]]></STORY_1>
-	
+	<STORY_1><![CDATA[Awesomepants! We need you! Our department is swamped with cases! ]]></STORY_1>
+	<STORY_2><![CDATA[You can solve cases in record time! Under 10 seconds I heard?]]></STORY_2>
+	<STORY_3><![CDATA[Alright! There's no time to lose! I expect the best out of you! Don't let me down]]></STORY_3>
+
+	<STORY_ANSWER_1><![CDATA[Tell me more Chief]]></STORY_ANSWER_1>
+	<STORY_ANSWER_2><![CDATA[Of course]]></STORY_ANSWER_2>
+	<STORY_ANSWER_3><![CDATA[Let's do it Chief!]]></STORY_ANSWER_3>
+
 	<CRIME_SCENE_SOLVED_1><![CDATA[Play]]></CRIME_SCENE_SOLVED_1>
 	<CRIME_SCENE_SOLVED_2><![CDATA[Play]]></CRIME_SCENE_SOLVED_2>
 	<CRIME_SCENE_SOLVED_3><![CDATA[Play]]></CRIME_SCENE_SOLVED_3>

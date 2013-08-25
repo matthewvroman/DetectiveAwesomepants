@@ -2,6 +2,7 @@ package com.ld48.screens
 {
 	import com.ld48.GameScreen;
 	import com.ld48.ScreenManager;
+	
 	import flash.display.MovieClip;
 	import flash.text.TextField;
 	
@@ -16,9 +17,13 @@ package com.ld48.screens
 		public var gameSubtitle:TextField;
 		public var playButton:MovieClip;
 		
+		public var background:MovieClip;
+		
 		public function TitleScreen() 
 		{
 			super();	
+			
+			background.gotoAndPlay(10); //skip the first fade
 			
 			addButton(playButton);
 		}

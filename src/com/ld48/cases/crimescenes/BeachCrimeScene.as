@@ -41,7 +41,7 @@ package com.ld48.cases.crimescenes
 		{
 			super.addSuspects();
 			addSuspect("Surfer", false);
-			addSuspect("Beach Guy", true);
+			addSuspect("BeachGuy", true);
 			addSuspect("Nudist", false);
 		}
 	}

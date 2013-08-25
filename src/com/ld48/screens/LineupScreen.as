@@ -65,7 +65,7 @@ package com.ld48.screens
 			{
 				if(_suspects[selected].guilty)
 				{
-					onSelectedCorrectSuspect();
+					onSelectedCorrectSuspect(_suspects[selected].characterName);
 				}
 				else
 				{
@@ -74,10 +74,10 @@ package com.ld48.screens
 			}
 		}
 		
-		private function onSelectedCorrectSuspect():void
+		private function onSelectedCorrectSuspect(culprit:String):void
 		{
 			trace("Correct!");
-			ScreenManager.instance.gotoScreen(new CrimeSolvedScreen(), true);
+			ScreenManager.instance.gotoScreen(new CrimeSolvedScreen(culprit), true);
 		}
 		
 		private function onSelectedWrongSuspect():void
