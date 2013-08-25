@@ -18,6 +18,17 @@
 	<CONFESSION_REPLY_HIPSTER><![CDATA[Enjoy your jail cell!]]></CONFESSION_REPLY_HIPSTER>
 	<CONFESSION_ASTRONAUT><![CDATA[I murdered him. On the moon! Isn't that outside the reach of the law? No? Oh. F***]]></CONFESSION_ASTRONAUT>
 	<CONFESSION_REPLY_ASTRONAUT><![CDATA[Justice always wins!]]></CONFESSION_REPLY_ASTRONAUT>
-	
+	<CONFESSION_SUMORED><![CDATA[Honor is for suckers! The Gyoji should have known that when he tried to stop me from taking steroids!]]></CONFESSION_SUMORED>
+	<CONFESSION_REPLY_SUMORED><![CDATA[Wrong! Honor is for winners!]]></CONFESSION_REPLY_SUMORED>
+	<CONFESSION_CLIMBERORANGE><![CDATA[Boris has no regrets. Boris is champion strangler. When Boris gets out, Boris finds you. Then he breaks you.]]></CONFESSION_CLIMBERORANGE>
+	<CONFESSION_REPLY_CLIMBERORANGE><![CDATA[Good luck with that champ!]]></CONFESSION_REPLY_CLIMBERORANGE>
+
+	<GAME_COMPLETE_1><![CDATA[Awesomepants! You sure saved our butts back there!]]></GAME_COMPLETE_1>
+	<GAME_COMPLETE_2><![CDATA[We couldn't have solved all those ridiculously hard cases without your skills]]></GAME_COMPLETE_2>
+	<GAME_COMPLETE_3><![CDATA[Captain Awesomepants would be proud! Now let's go for some beers!]]></GAME_COMPLETE_3>
+
+	<GAME_COMPLETE_ANSWER_1><![CDATA[Saving butts is my business]]></GAME_COMPLETE_ANSWER_1>
+	<GAME_COMPLETE_ANSWER_2><![CDATA[Awww shucks, Chief]]></GAME_COMPLETE_ANSWER_2>
+	<GAME_COMPLETE_ANSWER_3><![CDATA[You got it boss!]]></GAME_COMPLETE_ANSWER_3>
 
 </strings>

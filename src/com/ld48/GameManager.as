@@ -13,6 +13,7 @@ package com.ld48
 		
 		private var unsolvedCrimes:Vector.<Class>;
 		
+		private var _currentCrimeClass:Class;
 		private var _currentCrime:CrimeScene;
 		public function get currentCrime():CrimeScene { return _currentCrime; }
 		
@@ -51,7 +52,7 @@ package com.ld48
 			}
 			
 			unsolvedCrimes = new Vector.<Class>();
-			unsolvedCrimes.push(ForestCrimeScene,BeachCrimeScene,MoonCrimeScene);
+			unsolvedCrimes.push(EverestCrimeScene,ForestCrimeScene,BeachCrimeScene,MoonCrimeScene);
 			
 			_numCrimesSolved = 0;
 			_totalNumCrimes = unsolvedCrimes.length;
@@ -67,11 +68,18 @@ package com.ld48
 			
 			var index:int = MathHelper.RandomInt(0, unsolvedCrimes.length - 1);
 			
-			var crimeClass:Class = unsolvedCrimes[index];
-			_currentCrime = new crimeClass();
+			_currentCrimeClass = unsolvedCrimes[index];
+			_currentCrime = new _currentCrimeClass();
 			
 			unsolvedCrimes.splice(index, 1);
 			
+			ScreenManager.instance.gotoScreen(_currentCrime, true);
+		}
+		
+		public function startCurrentCrime():void
+		{
+			_currentCrime = null;
+			_currentCrime = new _currentCrimeClass();
 			ScreenManager.instance.gotoScreen(_currentCrime, true);
 		}
 		

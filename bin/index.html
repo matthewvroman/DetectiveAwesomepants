@@ -18,17 +18,18 @@
 			wmode: "direct" // can cause issues with FP settings & webcam
 		};
 		var attributes = {
-			id:"LD27"
+			id:"Main"
 		};
 		swfobject.embedSWF(
-			"LD27.swf", 
+			"Main.swf", 
 			"altContent", "100%", "100%", "10.0.0", 
 			"expressInstall.swf", 
 			flashvars, params, attributes);
 	</script>
 	<style>
-		html, body { height:100%; overflow:hidden; }
-		body { margin:0; }
+		html, body { height:100%; overflow:hidden; background: #000000; }
+		body { margin:auto; width: 960px; padding-top:25px; }
+		#Main { margin: auto; width: 960px; height: 640px;}
 	</style>
 </head>
 <body>
