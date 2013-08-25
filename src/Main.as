@@ -105,7 +105,7 @@ package
 			_gameManager = new GameManager();
 			_soundManager = new SoundManager();
 			
-			//_soundManager.playMusic("BackgroundMusic");
+			_soundManager.playMusic("music_background");
 			
 			_screenManager.gotoScreen(new TitleScreen());
 		}

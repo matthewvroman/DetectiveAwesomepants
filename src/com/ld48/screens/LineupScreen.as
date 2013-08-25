@@ -3,10 +3,12 @@ package com.ld48.screens
 	import com.ld48.GameScreen;
 	import com.ld48.ScreenManager;
 	import com.ld48.Suspect;
+	import com.ld48.MathHelper;
 	
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.text.TextField;
 	
 	/**
 	 * ...
@@ -19,6 +21,8 @@ package com.ld48.screens
 		public var suspect1:MovieClip;
 		public var suspect2:MovieClip;
 		public var suspect3:MovieClip;
+		
+		public var textField:TextField;
 		
 		public function LineupScreen(suspects:Vector.<Suspect>) 
 		{
@@ -40,6 +44,13 @@ package com.ld48.screens
 			addButton(suspect1);
 			addButton(suspect2);
 			addButton(suspect3);
+		}
+		
+		override public function initTextFields(_strings:XML):void
+		{
+			super.initTextFields(_strings);
+			
+			textField.text = _strings["LINEUP_TEXT_"+MathHelper.RandomInt(1,4)][0];
 		}
 		
 		override public function onButtonClicked(buttonName:String):void

@@ -12,11 +12,21 @@
 	<STORY_ANSWER_2><![CDATA[Of course]]></STORY_ANSWER_2>
 	<STORY_ANSWER_3><![CDATA[Let's do it Chief!]]></STORY_ANSWER_3>
 
+	<LINEUP_TEXT_1><![CDATA[Alright Awesomepants. Times up. Tell me who did this dastardly crime so we can lock them away. But be quick about it!]]></LINEUP_TEXT_1>
+	<LINEUP_TEXT_2><![CDATA[You had more than enough time! This ones easy. Who did it Awesomepants?]]></LINEUP_TEXT_2>
+	<LINEUP_TEXT_3><![CDATA[Times up Awesomepants. Lets see if you figured it out. The culprits staring you in the face!]]></LINEUP_TEXT_3>
+	<LINEUP_TEXT_4><![CDATA[Okay Awesomepants. We brought in the suspects. Don't let me down! We need to get this guy!]]></LINEUP_TEXT_4>
+
+	<CRIME_FAIL_1><![CDATA[Him? He's got an air tight alibi! I thought you were the best detective we had. I guess I was wrong.]]></CRIME_FAIL_1>
+	<CRIME_FAIL_2><![CDATA[Are you joking? There's no way it could have been him! Take some time off Detective. You need it.]]></CRIME_FAIL_2>
+	<CRIME_FAIL_3><![CDATA[It wasn't him! Awesomepants? Maybe it's time for a new name. Get it together Detective.]]></CRIME_FAIL_3>
+	<CRIME_FAIL_4><![CDATA[Wrong guy Detective. Captain Awesomepants had no patience for failure. You shouldn't either.]]></CRIME_FAIL_4>
+
 	<CONFESSION_BEACHGUY><![CDATA[Damn you Awesomepants! I would have gotten away with it if it wasn't for your pesky investigation!]]></CONFESSION_BEACHGUY>
 	<CONFESSION_REPLY_BEACHGUY><![CDATA[Justice is served!]]></CONFESSION_REPLY_BEACHGUY>
 	<CONFESSION_HIPSTER><![CDATA[Awesomepants? Hah, anyone who checked my Instagram could tell you I killed him! My followers are way better than you!]]></CONFESSION_HIPSTER>
 	<CONFESSION_REPLY_HIPSTER><![CDATA[Enjoy your jail cell!]]></CONFESSION_REPLY_HIPSTER>
-	<CONFESSION_ASTRONAUT><![CDATA[I murdered him. On the moon! Isn't that outside the reach of the law? No? Oh. F***]]></CONFESSION_ASTRONAUT>
+	<CONFESSION_ASTRONAUT><![CDATA[I murdered him. On the moon! Isn't that outside the reach of the law? No? Oh...]]></CONFESSION_ASTRONAUT>
 	<CONFESSION_REPLY_ASTRONAUT><![CDATA[Justice always wins!]]></CONFESSION_REPLY_ASTRONAUT>
 	<CONFESSION_SUMORED><![CDATA[Honor is for suckers! The Gyoji should have known that when he tried to stop me from taking steroids!]]></CONFESSION_SUMORED>
 	<CONFESSION_REPLY_SUMORED><![CDATA[Wrong! Honor is for winners!]]></CONFESSION_REPLY_SUMORED>

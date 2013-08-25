@@ -20,7 +20,7 @@ package com.ld48.screens
 		{
 			super.initTextFields(_strings);
 			
-			nextButton.textField.text = "Relive the experience!";
+			nextButton.textField.text = "Relive the epic experience!";
 		}
 		
 		override public function onButtonClicked(buttonName:String):void

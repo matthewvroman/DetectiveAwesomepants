@@ -52,7 +52,7 @@ package com.ld48
 			}
 			
 			unsolvedCrimes = new Vector.<Class>();
-			unsolvedCrimes.push(EverestCrimeScene,ForestCrimeScene,BeachCrimeScene,MoonCrimeScene);
+			unsolvedCrimes.push(EverestCrimeScene,SumoCrimeScene,ForestCrimeScene,BeachCrimeScene,MoonCrimeScene);
 			
 			_numCrimesSolved = 0;
 			_totalNumCrimes = unsolvedCrimes.length;

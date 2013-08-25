@@ -13,7 +13,7 @@ package com.ld48
 		private var musicSoundTransform:SoundTransform = new SoundTransform(1.0,0);
 		
 		private var sfxSoundChannel:SoundChannel = new SoundChannel();
-		private var sfxSoundTransform:SoundTransform = new SoundTransform(1.0,0);
+		private var sfxSoundTransform:SoundTransform = new SoundTransform(0.85,0);
 		
 		public function SoundManager()
 		{
