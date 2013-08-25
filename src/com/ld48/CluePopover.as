@@ -1,9 +1,10 @@
 package com.ld48 
 {
-	import flash.display.MovieClip;
-	import flash.text.TextField;
 	import fl.transitions.Tween;
 	import fl.transitions.easing.*;
+	
+	import flash.display.MovieClip;
+	import flash.text.TextField;
 	
 	/**
 	 * ...
@@ -14,6 +15,7 @@ package com.ld48
 		private static var ALPHA_TWEEN_DURATION:Number = 0.15;
 		
 		public var textField:TextField;
+		public var extendedBG:MovieClip;
 		
 		public function CluePopover() 
 		{
@@ -24,6 +26,8 @@ package com.ld48
 		public function setText(value:String):void
 		{
 			textField.text = value;
+			
+			extendedBG.visible = textField.numLines>1;
 		}
 		
 		public function show():void

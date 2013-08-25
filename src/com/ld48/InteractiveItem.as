@@ -48,7 +48,6 @@ package com.ld48
 		public function onMouseOver(e:MouseEvent):void
 		{
 			_cluePopover.show();
-			trace("Mouse over " + _text);
 		}
 		
 		public function onMouseOut(e:MouseEvent):void

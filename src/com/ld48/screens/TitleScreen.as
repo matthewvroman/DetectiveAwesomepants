@@ -12,6 +12,8 @@ package com.ld48.screens
 	public class TitleScreen extends GameScreen
 	{
 		public var text:TextField;
+		public var gameTitle:TextField;
+		public var gameSubtitle:TextField;
 		public var playButton:MovieClip;
 		
 		public function TitleScreen() 
@@ -21,11 +23,13 @@ package com.ld48.screens
 			addButton(playButton);
 		}
 		
-		override public function initTextFields():void
+		override public function initTextFields(_strings:XML):void
 		{
-			super.initTextFields();
+			super.initTextFields(_strings);
 			
-			playButton.textField.text = "Play";
+			gameTitle.text = _strings.TITLE_GAME_TITLE[0];
+			gameSubtitle.text = _strings.TITLE_GAME_SUBTITLE[0];
+			playButton.textField.text = _strings.TITLE_PLAY_BUTTON[0];
 		}
 		
 		override public function onButtonClicked(buttonName:String):void

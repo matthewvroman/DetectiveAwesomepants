@@ -20,7 +20,7 @@ package com.ld48
 			
 			this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 			
-			initTextFields();
+			initTextFields(Main.strings);
 		}
 		
 		public function init():void
@@ -28,7 +28,7 @@ package com.ld48
 			
 		}
 		
-		public function initTextFields():void
+		public function initTextFields(_strings:XML):void
 		{
 			
 		}

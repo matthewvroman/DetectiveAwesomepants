@@ -8,9 +8,10 @@ package
 	import flash.display.LoaderInfo;
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.net.URLLoader;
 	import flash.net.URLRequest;
-	import flash.system.LoaderContext;
 	import flash.system.ApplicationDomain;
+	import flash.system.LoaderContext;
 	import flash.utils.getTimer;
 	import flash.utils.setTimeout;
 	
@@ -34,6 +35,8 @@ package
 		public static var HEIGHT:Number = 640;
 		public static var WIDTH:Number = 960;
 		
+		public static var strings:XML;
+		
 		public function Main():void 
 		{
 			if (stage) init();
@@ -44,7 +47,7 @@ package
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 	
-			loadAssets();
+			loadStrings();
 			
 			_t = getTimer();
 			
@@ -64,6 +67,22 @@ package
 		   }
 		}
 		
+		private function loadStrings():void
+		{
+			var loader:URLLoader = new URLLoader();
+			var loaderContext:LoaderContext = new LoaderContext(false,ApplicationDomain.currentDomain);
+			var urlRequest:URLRequest = new URLRequest("assets/strings.xml");
+			loader.addEventListener(Event.COMPLETE, onStringsLoadComplete);
+			loader.load(urlRequest);
+		}
+		
+		private function onStringsLoadComplete(e:Event):void
+		{
+			strings = new XML(e.target.data);
+			
+			loadAssets();
+		}
+		
 		private function loadAssets():void
 		{
 			var loader:Loader = new Loader();
@@ -75,7 +94,6 @@ package
 		
 		private function onLoadComplete(e:Event):void
 		{
-			
 			initManagers();
 		}
 		

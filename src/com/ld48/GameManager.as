@@ -16,6 +16,9 @@ package com.ld48
 		private var _currentCrime:CrimeScene;
 		public function get currentCrime():CrimeScene { return _currentCrime; }
 		
+		private var _numCrimesSolved:int = 0;
+		private var _totalNumCrimes:int = 0;
+		
 		public function GameManager() 
 		{
 			if (_instance != null)
@@ -48,7 +51,10 @@ package com.ld48
 			}
 			
 			unsolvedCrimes = new Vector.<Class>();
-			unsolvedCrimes.push(BeachCrimeScene/*,ForestCrimeScene,MoonCrimeScene*/);
+			unsolvedCrimes.push(MoonCrimeScene/*ForestCrimeScene,BeachCrimeScene,MoonCrimeScene*/);
+			
+			_numCrimesSolved = 0;
+			_totalNumCrimes = unsolvedCrimes.length;
 		}
 		
 		public function startRandomInvestigation():void
@@ -81,17 +87,32 @@ package com.ld48
 		
 		public function onCrimeSolved():void
 		{
-			
+			_numCrimesSolved++;
 		}
 		
 		private function onCaseFailed():void
 		{
-			//ScreenManager.instance.gotoScreen(new GameOverScreen(), true);
+			
 		}
 		
 		public function get numCrimesLeft():int
 		{
 			return unsolvedCrimes.length;
+		}
+		
+		public function get totalNumCrimes():int
+		{
+			return _totalNumCrimes;
+		}
+		
+		public function get numCrimesSolved():int
+		{
+			return _numCrimesSolved;
+		}
+		
+		public function get numCrimesFailed():int
+		{
+			return _totalNumCrimes-numCrimesLeft - _numCrimesSolved;
 		}
 	}
 

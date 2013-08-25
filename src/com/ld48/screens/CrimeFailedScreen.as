@@ -17,6 +17,17 @@ package com.ld48.screens
 			addButton(nextButton);
 		}
 		
+		override public function initTextFields(_strings:XML):void
+		{
+			super.initTextFields(_strings);
+			
+			trace(_strings["CRIME_SCENE_FAILED_"+GameManager.instance.numCrimesFailed][0]);
+			
+
+			nextButton.textField.text = "Redeem Yourself";
+			
+		}
+		
 		override public function onButtonClicked(buttonName:String):void
 		{
 			super.onButtonClicked(buttonName);
@@ -24,7 +35,10 @@ package com.ld48.screens
 			switch(buttonName)
 			{
 				case "nextButton":
-					ScreenManager.instance.gotoScreen(new TitleScreen(),true);
+					if(GameManager.instance.numCrimesLeft>0)
+						GameManager.instance.startRandomInvestigation();
+					else
+						ScreenManager.instance.gotoScreen(new GameCompleteScreen(),true);
 					break;
 			}
 		}
