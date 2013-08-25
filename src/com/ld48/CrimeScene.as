@@ -8,6 +8,8 @@ package com.ld48
 	 */
 	public class CrimeScene extends GameScreen
 	{
+		protected var tagline:String = "";
+		
 		private var _items:Vector.<InteractiveItem>;
 		private var _suspects:Vector.<Suspect>;
 		public function get suspects():Vector.<Suspect> { return _suspects; }
@@ -16,6 +18,8 @@ package com.ld48
 		private var _timeLeft:Number = 0;
 		
 		private var _investigating:Boolean;
+		
+		private var _introSequence:CrimeIntroSequence = null;
 		
 		public function CrimeScene() 
 		{
@@ -26,6 +30,25 @@ package com.ld48
 		override public function init():void
 		{
 			super.init();
+			
+			startIntroSequence();
+		}
+		
+		private function startIntroSequence():void
+		{
+			_introSequence = new CrimeIntroSequence(tagline);
+			addChild(_introSequence);
+			_introSequence.gotoAndPlay(1);
+			
+			GameEventDispatcher.addEventListener(GameEvent.CRIME_SCENE_INTRO_END, onCaseIntroEnd);
+		}
+		
+		private function onCaseIntroEnd(e:GameEvent):void
+		{
+			GameEventDispatcher.removeEventListener(GameEvent.CRIME_SCENE_INTRO_END, onCaseIntroEnd);
+			
+			removeChild(_introSequence);
+			_introSequence = null;
 			
 			startInvestigation();
 		}

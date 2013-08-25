@@ -33,7 +33,8 @@ package com.ld48.screens
 			super.init();
 			for(var i:int = 0; i<_suspects.length; i++)
 			{
-				_suspectContainers[i].textField.text = _suspects[i].characterName;
+				_suspectContainers[i].character.gotoAndStop(_suspects[i].characterName);
+				//_suspectContainers[i].textField.text = _suspects[i].characterName;
 			}
 			
 			addButton(suspect1);

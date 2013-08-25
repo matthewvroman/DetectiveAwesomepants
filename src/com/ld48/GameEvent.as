@@ -11,6 +11,8 @@ package com.ld48
 		public static const CASE_START:String = "CaseStart";
 		public static const CASE_END:String = "CaseEnd";
 		
+		public static const CRIME_SCENE_INTRO_END:String = "CrimeSceneIntroEnd";
+		
 		public static const CRIME_SCENE_START:String = "CrimeSceneStart";
 		public static const CRIME_SCENE_END:String = "CrimeSceneEnd";
 		

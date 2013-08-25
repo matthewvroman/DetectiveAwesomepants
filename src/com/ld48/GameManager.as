@@ -48,7 +48,7 @@ package com.ld48
 			}
 			
 			unsolvedCrimes = new Vector.<Class>();
-			unsolvedCrimes.push(BeachCrimeScene,ForestCrimeScene,MoonCrimeScene);
+			unsolvedCrimes.push(BeachCrimeScene/*,ForestCrimeScene,MoonCrimeScene*/);
 		}
 		
 		public function startRandomInvestigation():void

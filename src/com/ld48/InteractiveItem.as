@@ -25,8 +25,19 @@ package com.ld48
 			
 			_cluePopover = new CluePopover();
 			_cluePopover.setText(_text);
-			_cluePopover.y = -_clip.getBounds(_clip.parent).height - CLUE_POPOVER_POSITION_BUFFER;
+			
 			_cluePopover.alpha = 0;
+			
+			//Determine if we should place the clue above or below
+			if(_clip.getBounds(_clip.parent).y - CLUE_POPOVER_POSITION_BUFFER < 0)
+			{
+				_cluePopover.y = _clip.getBounds(_clip.parent).bottom - _clip.y + CLUE_POPOVER_POSITION_BUFFER;
+			}
+			else
+			{
+				_cluePopover.y = _clip.getBounds(_clip.parent).y - _clip.y - CLUE_POPOVER_POSITION_BUFFER;
+			}
+			
 			_clip.addChild(_cluePopover);
 			
 			_clip.addEventListener(MouseEvent.MOUSE_OVER, onMouseOver);
@@ -37,6 +48,7 @@ package com.ld48
 		public function onMouseOver(e:MouseEvent):void
 		{
 			_cluePopover.show();
+			trace("Mouse over " + _text);
 		}
 		
 		public function onMouseOut(e:MouseEvent):void

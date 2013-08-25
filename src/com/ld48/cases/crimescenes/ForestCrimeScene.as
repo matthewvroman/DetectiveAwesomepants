@@ -15,6 +15,7 @@ package com.ld48.cases.crimescenes
 		{
 			super();
 			
+			tagline = "and the case of the forest fiend";
 		}
 		
 		override public function setupInteractiveItems():void

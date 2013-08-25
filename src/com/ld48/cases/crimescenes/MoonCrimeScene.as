@@ -7,6 +7,8 @@ package com.ld48.cases.crimescenes
 		public function MoonCrimeScene()
 		{
 			super();
+			
+			tagline = "and the case of the moon murder";
 		}
 	}
 }

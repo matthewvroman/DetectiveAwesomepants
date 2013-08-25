@@ -3,11 +3,12 @@ package
 	import com.ld48.GameManager;
 	import com.ld48.ScreenManager;
 	import com.ld48.screens.TitleScreen;
+	
+	import flash.display.Loader;
+	import flash.display.LoaderInfo;
 	import flash.display.Sprite;
 	import flash.events.Event;
-	import flash.display.Loader;
 	import flash.net.URLRequest;
-	import flash.display.LoaderInfo;
 	import flash.utils.getTimer;
 	import flash.utils.setTimeout;
 	
@@ -27,6 +28,9 @@ package
 		
 		private var _screenManager:ScreenManager;
 		private var _gameManager:GameManager;
+		
+		public static var HEIGHT:Number = 640;
+		public static var WIDTH:Number = 960;
 		
 		public function Main():void 
 		{
