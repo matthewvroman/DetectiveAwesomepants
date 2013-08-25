@@ -1,6 +1,7 @@
 package com.ld48
 {
 	import flash.display.MovieClip;
+	import flash.utils.getDefinitionByName;
 
 	public class Helper
 	{
@@ -12,6 +13,12 @@ package com.ld48
 		{
 			var mcClass:Class = movieClip.constructor;
 			return new mcClass();
+		}
+		
+		public static function getMovieClipFromLibrary(className:String):MovieClip
+		{
+			var classObj:Class = getDefinitionByName(className) as Class;
+			return new classObj() as MovieClip;
 		}
 
 	}

@@ -9,6 +9,8 @@ package
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.net.URLRequest;
+	import flash.system.LoaderContext;
+	import flash.system.ApplicationDomain;
 	import flash.utils.getTimer;
 	import flash.utils.setTimeout;
 	
@@ -65,13 +67,15 @@ package
 		private function loadAssets():void
 		{
 			var loader:Loader = new Loader();
+			var loaderContext:LoaderContext = new LoaderContext(false,ApplicationDomain.currentDomain);
 			var urlRequest:URLRequest = new URLRequest("assets/assets.swf");
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, onLoadComplete);
-			loader.load(urlRequest);
+			loader.load(urlRequest,loaderContext);
 		}
 		
 		private function onLoadComplete(e:Event):void
 		{
+			
 			initManagers();
 		}
 		

@@ -21,6 +21,8 @@ package com.ld48
 		
 		private var _introSequence:CrimeIntroSequence = null;
 		
+		private var _clock:MovieClip = null;
+		
 		public function CrimeScene() 
 		{
 			super();
@@ -51,6 +53,16 @@ package com.ld48
 			_introSequence = null;
 			
 			startInvestigation();
+			
+			addClock();
+		}
+		
+		public function addClock():void
+		{
+			_clock = Helper.getMovieClipFromLibrary("Clock");
+			addChild(_clock);
+			_clock.x = Main.WIDTH/2;
+			_clock.y = 65;
 		}
 		
 		public function startInvestigation():void
@@ -84,7 +96,19 @@ package com.ld48
 			//trace(_timeLeft);
 			if (_timeLeft <= 0)
 			{
+				if(_clock)
+				{
+					_clock.gotoAndStop(_clock.totalFrames);
+				}
+				
 				stopInvestigation();
+			}
+			else
+			{
+				if(_clock)
+				{
+					_clock.gotoAndStop(int(_clock.totalFrames * (CRIME_SCENE_LENGTH-_timeLeft)/CRIME_SCENE_LENGTH));
+				}
 			}
 		}
 		
@@ -122,6 +146,9 @@ package com.ld48
 		{
 			super.destroy();
 			
+			removeChild(_clock);
+			
+			_clock = null;
 			_items = null;
 			_suspects = null;
 		}
