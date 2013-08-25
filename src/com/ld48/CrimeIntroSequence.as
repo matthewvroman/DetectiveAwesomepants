@@ -43,6 +43,8 @@ package com.ld48
 			
 			var tween:Tween = new Tween(this,"alpha",None.easeNone,this.alpha,0,0.15,true);
 			tween.addEventListener(TweenEvent.MOTION_FINISH, onTweenComplete);
+			
+			SoundManager.instance.playSFX("sfx_click");
 		}
 		
 		private function onTweenComplete(e:TweenEvent):void	

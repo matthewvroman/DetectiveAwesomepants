@@ -91,10 +91,17 @@ package com.ld48.screens
 			switch(buttonName)
 			{
 				case "nextButton":
-					if(GameManager.instance.numCrimesLeft>0)
-						GameManager.instance.startRandomInvestigation();
+					if(currentStoryLineChar < currentStoryString.length)
+					{
+						currentStoryLineChar = currentStoryString.length-1;
+					}
 					else
-						ScreenManager.instance.gotoScreen(new GameCompleteScreen(),true);
+					{
+						if(GameManager.instance.numCrimesLeft>0)
+							GameManager.instance.startRandomInvestigation();
+						else
+							ScreenManager.instance.gotoScreen(new GameCompleteScreen(),true);
+					}
 					break;
 			}
 		}

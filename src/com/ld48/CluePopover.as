@@ -1,6 +1,7 @@
 package com.ld48 
 {
 	import fl.transitions.Tween;
+	import fl.transitions.TweenEvent;
 	import fl.transitions.easing.*;
 	
 	import flash.display.MovieClip;
@@ -17,6 +18,8 @@ package com.ld48
 		public var textField:TextField;
 		public var extendedBG:MovieClip;
 		
+		private var tween:Tween;
+		
 		public function CluePopover() 
 		{
 			super();
@@ -32,14 +35,35 @@ package com.ld48
 		
 		public function show():void
 		{
-			var tween:Tween = new Tween(this, "alpha", None.easeNone, this.alpha, 1.0, ALPHA_TWEEN_DURATION,true);
+			cleanupOldTween();
+			
+			tween = new Tween(this, "alpha", None.easeNone, this.alpha, 1.0, ALPHA_TWEEN_DURATION,true);
+			tween.addEventListener(TweenEvent.MOTION_FINISH,onMotionFinish);
 		}
 		
 		public function hide():void
 		{
-			var tween:Tween = new Tween(this, "alpha", None.easeNone, this.alpha, 0.0,ALPHA_TWEEN_DURATION,true);
+			cleanupOldTween();
+			
+			tween = new Tween(this, "alpha", None.easeNone, this.alpha, 0.0,ALPHA_TWEEN_DURATION,true);
 		}
 		
+		private function cleanupOldTween():void
+		{
+			if(!tween) return;
+			
+			if(tween.hasEventListener(TweenEvent.MOTION_FINISH))
+			{
+				tween.removeEventListener(TweenEvent.MOTION_FINISH,onMotionFinish);
+			}
+			
+			tween = null;
+		}
+		
+		private function onMotionFinish(e:TweenEvent):void
+		{
+			SoundManager.instance.playSFX("sfx_hover");
+		}
 	}
 
 }

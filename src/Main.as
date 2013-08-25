@@ -2,6 +2,7 @@ package
 {
 	import com.ld48.GameManager;
 	import com.ld48.ScreenManager;
+	import com.ld48.SoundManager;
 	import com.ld48.screens.TitleScreen;
 	
 	import flash.display.Loader;
@@ -31,6 +32,7 @@ package
 		
 		private var _screenManager:ScreenManager;
 		private var _gameManager:GameManager;
+		private var _soundManager:SoundManager;
 		
 		public static var HEIGHT:Number = 640;
 		public static var WIDTH:Number = 960;
@@ -101,6 +103,9 @@ package
 		{
 			_screenManager = new ScreenManager(stage);
 			_gameManager = new GameManager();
+			_soundManager = new SoundManager();
+			
+			//_soundManager.playMusic("BackgroundMusic");
 			
 			_screenManager.gotoScreen(new TitleScreen());
 		}

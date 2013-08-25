@@ -1,6 +1,7 @@
 package com.ld48
 {
 	import flash.display.MovieClip;
+	import flash.media.Sound;
 	import flash.utils.getDefinitionByName;
 
 	public class Helper
@@ -19,6 +20,12 @@ package com.ld48
 		{
 			var classObj:Class = getDefinitionByName(className) as Class;
 			return new classObj() as MovieClip;
+		}
+		
+		public static function getSoundFromLibrary(className:String):Sound
+		{
+			var classObj:Class = getDefinitionByName(className) as Class;
+			return new classObj() as Sound; 
 		}
 
 	}
